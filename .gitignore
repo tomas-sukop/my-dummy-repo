@@ -1,0 +1,17 @@
+# Build and test output
+build/
+dist/
+coverage/
+*.log
+
+# Local editor and OS files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Jenkins and temporary workspace files
+workspace/
+tmp/
+temp/
