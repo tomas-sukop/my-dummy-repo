@@ -17,5 +17,6 @@ sh -n scripts/smoke-test.sh
 grep -q "pipeline" Jenkinsfile || fail "Jenkinsfile should define a declarative pipeline"
 grep -q "scripts/smoke-test.sh" Jenkinsfile || fail "Jenkinsfile should run the smoke test"
 grep -q "archiveArtifacts" Jenkinsfile || fail "Jenkinsfile should archive build artifacts"
+grep -q "stage('Archive')" Jenkinsfile || fail "Jenkinsfile should archive artifacts inside an agent-backed stage"
 
 printf 'Repository validation passed.\n'

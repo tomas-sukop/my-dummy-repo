@@ -28,11 +28,11 @@ pipeline {
                 '''
             }
         }
-    }
 
-    post {
-        always {
-            archiveArtifacts artifacts: 'build/logs/**/*.log', allowEmptyArchive: true
+        stage('Archive') {
+            steps {
+                archiveArtifacts artifacts: 'build/logs/**/*.log', allowEmptyArchive: true
+            }
         }
     }
 }
